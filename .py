@@ -11,7 +11,7 @@ for r in range(x1, x2):
     x=r
     Locfunction=function.lower()
     y=eval(Locfunction)
-    ycoordlist.append(y)
+    ycoordlistL.append(y)
 print(ycoordlistL)
 
 ycoordlistR=[]                               #This prints a list of the y values. 
@@ -19,7 +19,7 @@ for r in range(x1-1, x2+1):
     x=r
     Locfunction=function.lower()
     y=eval(Locfunction)
-    ycoordlist.append(y)
+    ycoordlistR.append(y)
 print(ycoordlistR)
 
 xcoordlistM=[]
@@ -33,7 +33,7 @@ for r in xcoordlistM:
     x=r
     Locfunction=function.lower()
     y=eval(Locfunction)
-    ycoordlist.append(y)
+    ycoordlistM.append(y)
 print(ycoordlistM)
 
 Larealist=[]
