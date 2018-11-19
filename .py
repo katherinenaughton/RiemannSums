@@ -6,22 +6,25 @@ rectangles=int(input("How many rectangles would you like to have? "))
 width=((x2-x1)/rectangles)
 print(width)
 
-xcoordlist=[]
-for r in range(x1, x2+1):
-    xcoordlist.append(r)
-print(xcoordlist)
+
 
 lengthx=int(len(xcoordlist))
 flengthx=lengthx
 print(flengthx)
 
-xcoordlist2=[]
-for r in range(x1, x2+flengthx):
-    xcoordlist2.append(r)
-print(xcoordlist2)
-
-xcoordlist3=[(x*width) for x in xcoordlist2)
-print(xcoordlist3)
+if width=!1:
+    xcoordlist2=[]
+    for r in range(x1, x2+flengthx):
+        xcoordlist2.append(r)
+    print(xcoordlist2)
+    
+    xcoordlist3=[(x*width) for x in xcoordlist2]
+    print(xcoordlist3)
+else:
+    xcoordlist=[]
+    for r in range(x1, x2+1):
+        xcoordlist.append(r)
+    print(xcoordlist)
 
 
 
