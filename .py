@@ -3,8 +3,22 @@ x1=int(input("Where would you like your interval to start? "))
 x2=int(input("Where would you like your interval to end? "))
 rectangles=int(input("How many rectangles would you like to have? "))
 
-width=(x2-x1)/rectangles
+width=((x2-x1)/rectangles)
+print(width)
 
+xcoordlist=[]
+for r in range(x1, x2+1):
+    xcoordlist.append(r)
+print(xcoordlist)
+
+lengthx=length(xcoordlist)
+print(lengthx)
+
+#finxcoordlist=[]
+#for r in range(x1, x2+
+
+
+#finalxcoordlist=[(width*x) for x in xcoordlist
 
 ycoordlistL=[]                               #This prints a list of the y values. 
 for r in range(x1, x2):
@@ -36,22 +50,23 @@ for r in xcoordlistM:
     ycoordlistM.append(y)
 print(ycoordlistM)
 
+length=len(ycoordlistL)
 Larealist=[]
-for r in range(x1, x2+1):
+for r in range(length):
     area=ycoordlistL[r]*width
-    arealist.append(area)
+    Larealist.append(area)
 print(Larealist)
 
 Rarealist=[]
-for r in range(x1, x2+1):
+for r in range(length):
     area=ycoordlistR[r]*width
-    arealist.append(area)
+    Rarealist.append(area)
 print(Rarealist)
 
 Marealist=[]
-for r in range(x1, x2+1):
+for r in range(length):
     area=ycoordlistM[r]*width
-    arealist.append(area)
+    Marealist.append(area)
 print(Marealist)
 
 Lsum=sum(Marealist)
