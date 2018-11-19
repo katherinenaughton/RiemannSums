@@ -12,7 +12,7 @@ for r in range(x1, x2):
     Locfunction=function.lower()
     y=eval(Locfunction)
     ycoordlist.append(y)
-print(ycoordlist)
+print(ycoordlistL)
 
 ycoordlistR=[]                               #This prints a list of the y values. 
 for r in range(x1-1, x2+1):
@@ -20,7 +20,7 @@ for r in range(x1-1, x2+1):
     Locfunction=function.lower()
     y=eval(Locfunction)
     ycoordlist.append(y)
-print(ycoordlist)
+print(ycoordlistR)
 
 xcoordlistM=[]
 for r in range (x1, x2):
@@ -34,16 +34,34 @@ for r in xcoordlistM:
     Locfunction=function.lower()
     y=eval(Locfunction)
     ycoordlist.append(y)
-print(ycoordlist)
+print(ycoordlistM)
 
-arealist=[]
+Larealist=[]
 for r in range(x1, x2+1):
-    area=ycoordlist[r]*width
+    area=ycoordlistL[r]*width
     arealist.append(area)
-print(arealist)
+print(Larealist)
 
-sum=sum(arealist)
-print(sum)
+Rarealist=[]
+for r in range(x1, x2+1):
+    area=ycoordlistR[r]*width
+    arealist.append(area)
+print(Rarealist)
+
+Marealist=[]
+for r in range(x1, x2+1):
+    area=ycoordlistM[r]*width
+    arealist.append(area)
+print(Marealist)
+
+Lsum=sum(Marealist)
+print(Lsum)
+
+Rsum=sum(Rarealist)
+print(Rsum)
+
+Msum=sum(Marealist)
+print(Msum)
 
 
 
