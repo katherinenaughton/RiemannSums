@@ -11,11 +11,21 @@ for r in range(x1, x2+1):
     xcoordlist.append(r)
 print(xcoordlist)
 
-lengthx=length(xcoordlist)
-print(lengthx)
+lengthx=int(len(xcoordlist))
+flengthx=lengthx
+print(flengthx)
 
-#finxcoordlist=[]
-#for r in range(x1, x2+
+xcoordlist2=[]
+for r in range(x1, x2+flengthx):
+    xcoordlist2.append(r)
+print(xcoordlist2)
+
+xcoordlist3=[(x*width) for x in xcoordlist2)
+print(xcoordlist3)
+
+
+
+
 
 
 #finalxcoordlist=[(width*x) for x in xcoordlist
