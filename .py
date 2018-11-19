@@ -16,7 +16,15 @@ for r in range(x1, x2+1):
     ycoordlist.append(y)
 #print(ycoordlist)
 
-for r in range 
+arealist=[]
+for r in range(x1, x2+1):
+    area=ycoordlist[r]*width
+    arealist.append(area)
+print(arealist)
+
+sum=sum(arealist)
+print(sum)
+    
 
 
 
