@@ -9,31 +9,38 @@ print(width)
 xcoordlist=[]
 for r in range(x1, x2+1):
     xcoordlist.append(r)
+    
+lastxcoord=xcoordlist[-1]
+
 
 lengthx=int(len(xcoordlist))
 print(lengthx)
 
-xcoordlist2=[]
-    for r in range(x1, x2):
-        xcoordlist2.append(r)
-        xcoordlist2.append(r+width)
-    print(xcoordlist2)
-
-'''
 if width!=1:
-    xcoordlist2=[]
-    for r in range(x1, x2+flengthx):
-        xcoordlist2.append(r)
-    print(xcoordlist2)
+    xcoordlistL=[]
+    for r in range(x1, x2):
+        xcoordlistL.append(r)
+        xcoordlistL.append(r+width)
+    print(xcoordlistL)
     
-    xcoordlist3=[(x*width) for x in xcoordlist2]
-    print(xcoordlist3)
+    xcoordlist R=[]
+    for r in range(x1+1, x2):
+        xcoordlistR.append(r)
+        xcoordlistR.append(r+width)
+    print(xcoordlistL)
+    
+    xcoordlistM=[]
+    for r in range (x1, x2):
+        x=r+(width/2)
+        xcoordlistM.append(x)
+    print(xcoordlistM)
+
 else:
     xcoordlist=[]
     for r in range(x1, x2+1):
         xcoordlist.append(r)
     print(xcoordlist)
-'''
+
 
 ycoordlistL=[]                               #This prints a list of the y values. 
 for r in range(x1, x2):
