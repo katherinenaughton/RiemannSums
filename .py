@@ -23,11 +23,11 @@ if width!=1:
         xcoordlistL.append(r+width)
     print(xcoordlistL)
     
-    xcoordlist R=[]
+    xcoordlistR=[]
     for r in range(x1+1, x2):
         xcoordlistR.append(r)
         xcoordlistR.append(r+width)
-    print(xcoordlistL)
+    print(xcoordlistR)
     
     xcoordlistM=[]
     for r in range (x1, x2):
