@@ -91,10 +91,12 @@ for r in range(length):
 Lsum=sum(Marealist)
 print(Lsum)
 
+Msum=sum(Marealist)
+print(Msum)
+
 Rsum=sum(Rarealist)
 print(Rsum)
 
-Msum=sum(Marealist)
-print(Msum)
+
 
 
