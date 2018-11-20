@@ -71,7 +71,7 @@ length=len(ycoordlistL)
 
 Larealist=[]
 for r in range(length):
-    area=ycoordlistL[r]*width
+    area=(ycoordlistL[r]*width)
     Larealist.append(area)
 #print(Larealist)
 
