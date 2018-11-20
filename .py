@@ -67,7 +67,6 @@ for r in MRAMxcoord:
 print(ycoordlistM)
 
 
-
 length=len(ycoordlistL)
 
 Larealist=[]
