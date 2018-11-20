@@ -13,7 +13,7 @@ for i in range(rectangles+1):
     xcoordlist.append(x1+(b*width))
     b+=1
 
-#print("your x=coordinates are: ",xcoordlist)
+print("your x=coordinates are: ",xcoordlist)
 
 LRAMxcoord = []
 RRAMxcoord = []
@@ -33,7 +33,7 @@ for i in range(len(xcoordlist)-1):
     RRAMxcoord.append(Rxcoordlist[i])
  
 
-print(LRAMxcoord)
+#print(LRAMxcoord)
 #print(RRAMxcoord)
 #print(MRAMxcoord)
 
@@ -48,7 +48,7 @@ for r in LRAMxcoord:
     Locfunction=function.lower()
     y=eval(Locfunction)
     ycoordlistL.append(y)
-print(ycoordlistL)
+#print(ycoordlistL)
 
 ycoordlistR=[]                               #This prints a list of the y values. 
 for r in RRAMxcoord:
@@ -68,14 +68,14 @@ for r in MRAMxcoord:
 
 
 length=len(ycoordlistL)
-print(length)
+#print(length)
 
 Larealist=[]
 for r in range(length):
     area=ycoordlistL[r]*width
     print(area)
     Larealist.append(area)
-print(Larealist)
+#print(Larealist)
 
 Rarealist=[]
 for r in range(length):
@@ -90,13 +90,13 @@ for r in range(length):
 #print(Marealist)
 
 Lsum=sum(Larealist)
-print(Lsum)
+print("Your LRAM sum is", Lsum)
 
 Msum=sum(Marealist)
-#print(Msum)
+print("Your MRAM sum is", Msum)
 
 Rsum=sum(Rarealist)
-#print(Rsum)
+print("Your RRAM sum is", Rsum)
 
 
 
