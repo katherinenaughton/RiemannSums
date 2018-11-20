@@ -38,7 +38,7 @@ print(RRAMxcoord)
 print(MRAMxcoord)
 
 
-lastxcoord=xcoordlist[-1]
+
 
 
 lengthx=int(len(xcoordlist))
