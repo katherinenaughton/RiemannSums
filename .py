@@ -4,7 +4,7 @@ x2=int(input("Where would you like your interval to end? "))
 rectangles=int(input("How many rectangles would you like to have? "))
 
 width=((x2-x1)/rectangles)
-print(width)
+#print(width)
 
 
 xcoordlist=[]
@@ -13,7 +13,7 @@ for i in range(rectangles+1):
     xcoordlist.append(x1+(b*width))
     b+=1
 
-print("your x=coordinates are: ",xcoordlist)
+#print("your x=coordinates are: ",xcoordlist)
 
 LRAMxcoord = []
 RRAMxcoord = []
@@ -34,12 +34,12 @@ for i in range(len(xcoordlist)-1):
  
 
 print(LRAMxcoord)
-print(RRAMxcoord)
-print(MRAMxcoord)
+#print(RRAMxcoord)
+#print(MRAMxcoord)
 
 
 lengthx=int(len(xcoordlist))
-print(lengthx)
+#print(lengthx)
 
 
 ycoordlistL=[]                               #This prints a list of the y values. 
@@ -64,14 +64,16 @@ for r in MRAMxcoord:
     Locfunction=function.lower()
     y=eval(Locfunction)
     ycoordlistM.append(y)
-print(ycoordlistM)
+#print(ycoordlistM)
 
 
 length=len(ycoordlistL)
+print(length)
 
 Larealist=[]
 for r in range(length):
-    area=(ycoordlistL[r]*width)
+    area=ycoordlistL[r]*width
+    print(area)
     Larealist.append(area)
 print(Larealist)
 
@@ -87,14 +89,14 @@ for r in range(length):
     Marealist.append(area)
 #print(Marealist)
 
-Lsum=sum(Marealist)
+Lsum=sum(Larealist)
 print(Lsum)
 
 Msum=sum(Marealist)
-print(Msum)
+#print(Msum)
 
 Rsum=sum(Rarealist)
-print(Rsum)
+#print(Rsum)
 
 
 
