@@ -38,44 +38,38 @@ print(RRAMxcoord)
 print(MRAMxcoord)
 
 
-
-
-
 lengthx=int(len(xcoordlist))
 print(lengthx)
 
 
 ycoordlistL=[]                               #This prints a list of the y values. 
-for r in range(x1, x2):
+for r in LRAMxcoord:
     x=r
     Locfunction=function.lower()
     y=eval(Locfunction)
     ycoordlistL.append(y)
-#print(ycoordlistL)
+print(ycoordlistL)
 
 ycoordlistR=[]                               #This prints a list of the y values. 
-for r in range(x1-1, x2+1):
+for r in RRAMxcoord:
     x=r
     Locfunction=function.lower()
     y=eval(Locfunction)
     ycoordlistR.append(y)
 #print(ycoordlistR)
 
-xcoordlistM=[]
-for r in range (x1, x2):
-    x=r+(width/2)
-    xcoordlistM.append(x)
-#print(xcoordlistM)
-
-ycoordlistM=[]                               
-for r in xcoordlistM:
+ycoordlistM=[]
+for r in MRAMxcoord:
     x=r
     Locfunction=function.lower()
     y=eval(Locfunction)
     ycoordlistM.append(y)
-#print(ycoordlistM)
+print(ycoordlistM)
+
+
 
 length=len(ycoordlistL)
+
 Larealist=[]
 for r in range(length):
     area=ycoordlistL[r]*width
