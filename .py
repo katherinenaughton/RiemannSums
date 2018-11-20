@@ -1,3 +1,6 @@
+from math import sin, cos, tan, acos, asin, atan
+from math import exp, e, pi
+from math import log, log10, sqrt, log2
 function=input("Please input a function: ")
 x1=int(input("Where would you like your interval to start? "))
 x2=int(input("Where would you like your interval to end? "))
