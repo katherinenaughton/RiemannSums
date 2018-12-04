@@ -111,7 +111,7 @@ h=(width/2)
 
 xcoordlists=[]
 b=0
-for r in range((2*rectangles)+1):
+for r in range((4*rectangles)+1):
     xcoordlists.append(x1+(b*h))
     b+=1
 
@@ -121,6 +121,17 @@ for r in xcoordlist:
     Locfunction=function.lower()
     y=eval(Locfunction)
     ycoordlists.append(y)
+
+lengths=len(ycoordlists)
+print(lengths)
+
+
+
+
+
+    
+ycoordlists[0]+ycoordlist[-1]
+
 
 
 
