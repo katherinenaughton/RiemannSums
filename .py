@@ -1,3 +1,7 @@
+'''
+Katie, Ella, Alice, Ingrid
+'''
+
 function=input("Please input a function: ")
 x1=int(input("Where would you like your interval to start? "))
 x2=int(input("Where would you like your interval to end? "))
