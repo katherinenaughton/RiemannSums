@@ -1,7 +1,12 @@
+'''
+Riemann Sum
+Katie, Ella, Ingrid, Alice
+'''
+
 function=input("Please input a function: ")
 x1=int(input("Where would you like your interval to start? "))
 x2=int(input("Where would you like your interval to end? "))
-rectangles=int(input("How many rectangles would you like to have? "))
+rectangles=int(input("How many shapes would you like to have? "))
 
 width=((x2-x1)/rectangles)
 #print(width)
@@ -99,6 +104,26 @@ print("Your RRAM sum is", Rsum)
 
 TrapSum=(Lsum+Rsum)/2
 print("Your Trapezoid Sum is", TrapSum)
+
+#SIMPSONS SHAPES
+
+h=(width/2)
+
+xcoordlists=[]
+b=0
+for r in range((2*rectangles)+1):
+    xcoordlists.append(x1+(b*h))
+    b+=1
+
+ycoordlists=[]
+for r in xcoordlist:
+    x=r
+    Locfunction=function.lower()
+    y=eval(Locfunction)
+    ycoordlists.append(y)
+
+
+
 
 
 
