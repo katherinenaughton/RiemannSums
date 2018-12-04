@@ -97,6 +97,9 @@ print("Your MRAM sum is", Msum)
 Rsum=sum(Rarealist)
 print("Your RRAM sum is", Rsum)
 
+TrapSum=(Lsum+Rsum)/2
+print("Your Trapezoid Sum is", TrapSum)
+
 
 
 
