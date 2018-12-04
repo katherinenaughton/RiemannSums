@@ -8,7 +8,7 @@ x2=int(input("Where would you like your interval to end? "))
 rectangles=int(input("How many shapes would you like to have? "))
 
 width=((x2-x1)/rectangles)
-#print(width)
+print(width)
 
 
 xcoordlist=[]
