@@ -1,8 +1,3 @@
-'''
-Riemann Sum
-Katie, Ella, Ingrid, Alice
-'''
-
 function=input("Please input a function: ")
 x1=int(input("Where would you like your interval to start? "))
 x2=int(input("Where would you like your interval to end? "))
@@ -102,40 +97,39 @@ print("Your MRAM sum is", Msum)
 Rsum=sum(Rarealist)
 print("Your RRAM sum is", Rsum)
 
-TrapSum=(Lsum+Rsum)/2
-print("Your Trapezoid Sum is", TrapSum)
+print("Your TRAP sum is", ((Lsum+Rsum)/2))
 
-#SIMPSONS SHAPES
+h = width/2
 
-h=(width/2)
-
-xcoordlists=[]
+xcoordlist=[]
 b=0
-for r in range((4*rectangles)+1):
-    xcoordlists.append(x1+(b*h))
+for i in range((2*rectangles)+1):
+    xcoordlist.append(x1+(b*h))
     b+=1
-
-ycoordlists=[]
+    
+ycoordlist=[]                               #This makes a list of the y values. 
 for r in xcoordlist:
     x=r
     Locfunction=function.lower()
     y=eval(Locfunction)
-    ycoordlists.append(y)
-
-lengths=len(ycoordlists)
-print(lengths)
-
-
-
-
-
+    ycoordlist.append(y)
     
-ycoordlists[0]+ycoordlist[-1]
-
-
-
-
-
-
-
-
+Sarealist = []    
+a = 1
+b = 2
+c = 0
+for f in ycoordlist:
+    if b < len(ycoordlist):
+        A = ycoordlist[a]
+        B = ycoordlist[b]
+        C = ycoordlist[c]
+        d = (h/3)*(C+(4*A)+B)
+        print(d)
+        Sarealist.append(d)
+        a+=2
+        b+=2
+        c+=2
+    else:
+        print()
+        
+print(sum(Sarealist))
