@@ -2,138 +2,38 @@
 Katie, Ella, Alice, Ingrid
 '''
 
-function=input("Please input a function: ")
-x1=int(input("Where would you like your interval to start? "))
-x2=int(input("Where would you like your interval to end? "))
-rectangles=int(input("How many shapes would you like to have? "))
+from math import sin, cos, tan, acos, asin, atan, exp, e, pi, log, log10, sqrt, log2
 
-width=((x2-x1)/rectangles)
-print(width)
+L=0#LRAM
+M=0#MRAM
+R=0#RRAM
+S=0#Simpsons
 
+n = int(input("Rectangles"))
+function = input("Function")
+start = float(input("Start"))
+end = float(input("End"))
 
-xcoordlist=[]
-b=0
-for i in range(rectangles+1):
-    xcoordlist.append(x1+(b*width))
-    b+=1
+width = (end - start)/float(n)
 
-print("your x=coordinates are: ",xcoordlist)
-
-LRAMxcoord = []
-RRAMxcoord = []
-MRAMxcoord = []
-
-b=0
-for i in range(len(xcoordlist)-1):
-    LRAMxcoord.append(xcoordlist[i])
-
-b=1   
-for i in xcoordlist:
-    s = xcoordlist[b]
-    MRAMxcoord.append(i+s/2)
-
-Rxcoordlist = xcoordlist[::-1]  
-for i in range(len(xcoordlist)-1):
-    RRAMxcoord.append(Rxcoordlist[i])
- 
-
-#print(LRAMxcoord)
-#print(RRAMxcoord)
-#print(MRAMxcoord)
-
-
-lengthx=int(len(xcoordlist))
-#print(lengthx)
-
-
-ycoordlistL=[]                               #This prints a list of the y values. 
-for r in LRAMxcoord:
-    x=r
-    Locfunction=function.lower()
-    y=eval(Locfunction)
-    ycoordlistL.append(y)
-#print(ycoordlistL)
-
-ycoordlistR=[]                               #This prints a list of the y values. 
-for r in RRAMxcoord:
-    x=r
-    Locfunction=function.lower()
-    y=eval(Locfunction)
-    ycoordlistR.append(y)
-#print(ycoordlistR)
-
-ycoordlistM=[]
-for r in MRAMxcoord:
-    x=r
-    Locfunction=function.lower()
-    y=eval(Locfunction)
-    ycoordlistM.append(y)
-#print(ycoordlistM)
-
-
-length=len(ycoordlistL)
-#print(length)
-
-Larealist=[]
-for r in range(length):
-    area=ycoordlistL[r]*width
-    Larealist.append(area)
-#print(Larealist)
-
-Rarealist=[]
-for r in range(length):
-    area=ycoordlistR[r]*width
-    Rarealist.append(area)
-#print(Rarealist)
-
-Marealist=[]
-for r in range(length):
-    area=ycoordlistM[r]*width
-    Marealist.append(area)
-#print(Marealist)
-
-Lsum=sum(Larealist)
-print("Your LRAM sum is", Lsum)
-
-Msum=sum(Marealist)
-print("Your MRAM sum is", Msum)
-
-Rsum=sum(Rarealist)
-print("Your RRAM sum is", Rsum)
-
-print("Your TRAP sum is", ((Lsum+Rsum)/2))
-
-h = width/2
-
-xcoordlist=[]
-b=0
-for i in range((2*rectangles)+1):
-    xcoordlist.append(x1+(b*h))
-    b+=1
+for i in range(n):
+    temp = 0
+    x = start + i*width
+    L += eval(function)*width
+    temp += eval(function)
     
-ycoordlist=[]                               #This makes a list of the y values. 
-for r in xcoordlist:
-    x=r
-    Locfunction=function.lower()
-    y=eval(Locfunction)
-    ycoordlist.append(y)
+    x = start + (i+0.5)*width
+    M += eval(function)*width
+    temp += 4*eval(function)
     
-Sarealist = []    
-a = 1
-b = 2
-c = 0
-for f in ycoordlist:
-    if b < len(ycoordlist):
-        A = ycoordlist[a]
-        B = ycoordlist[b]
-        C = ycoordlist[c]
-        d = (h/3)*(C+(4*A)+B)
-        print(d)
-        Sarealist.append(d)
-        a+=2
-        b+=2
-        c+=2
-    else:
-        print()
-        
-print(sum(Sarealist))
+    x = start + (i+1)*width
+    R += eval(function)*width
+    temp += eval(function)
+    
+    S += (temp)*width/(2*3)
+    
+print("LRAM: ",L)
+print("MRAM: ",M)
+print("RRAM: ",R)
+print("Trapezoid :",(L+R)/2)
+print("Simpson's Method: ", S)
